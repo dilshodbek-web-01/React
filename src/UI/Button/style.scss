@@ -1,0 +1,16 @@
+.button {
+  font-family: "Rowdies";
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+  padding: 10px 21px;
+  background: #ff9635;
+  border-radius: 6px;
+  border: none;
+
+  &:hover {
+    color:  #ff9635;
+    background-color: #ffffff;
+  }
+}
