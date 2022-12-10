@@ -14,6 +14,11 @@ import Shoes1 from "../../assets/images/shoes1.png";
 import Shoes2 from "../../assets/images/shoes2.png";
 import Shoes3 from "../../assets/images/shoes3.png";
 import Shoes4 from "../../assets/images/shoes4.png";
+import ShoesStairs from "../../assets/images/shoesStairs.png";
+import Girl from "../../assets/images/girl.svg";
+import BlackShoes from "../../assets/images/blackShoes.png";
+
+
 
 const index = () => {
     return (
@@ -134,6 +139,50 @@ const index = () => {
                                 <Box title="Puma Running" img={Shoes4} prices="$200"/>
                             </div>
 
+                            <h2 className="gallery__testimonials-titleMove">Testimonials</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container">
+                        <div className="testimonials">
+                            <div className="testimonials__right">
+                                <img src={ShoesStairs} alt="ShoesStairs" className="testimonials__right-img" />
+                            </div>
+                            <div className="testimonials__left">
+                                <div className="testimonials__left--up">
+                                    <img src={Girl} alt="Girl" className="testimonials__left--up-img" />
+                                    <div className="testimonials__left--up--slider">
+                                        <img src={Left} alt="Left" className="testimonials__left--up--slider-imgRight" />
+                                        <img src={Right} alt="Right" className="testimonials__left--up--slider-imgLeft" />
+                                    </div>
+                                </div>
+                                <div className="testimonials__left--content">
+                                    <h4 className="testimonials__left--content-title"><strong>Their services was best and friendly</strong></h4>
+                                    <p className="testimonials__left--content-text">Lorem ipsum dolor sit amet, consectetur adipis cing elit. Eleifend </p>
+                                    <h5 className="testimonials__left--content-title2"><strong>Anna Paulwer</strong></h5>
+                                    <p className="testimonials__left--content-text2">Athletic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container">
+                        <div className="news">
+                            <div className="news__right">
+                                <img src={BlackShoes} alt="BlackShoes" className="news__rightImg" />
+                            </div>
+                            <div className="news__left">
+                                <h3 className="news__left-title">Sign Up to our Newsletter</h3>
+                                <p className="news__left-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in elementum tempus, vestibulum faucibus tortor odio elit.</p>
+                                <div className="news__left--send">
+                                    <input type="text" className="news__left--send-input" />
+                                    <button className="news__left--send-btn">Send</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
