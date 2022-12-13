@@ -1,9 +1,10 @@
 import React from 'react';
 import "./style.scss";
 
-const index = (props) => {
+const index = ({ user: { image, title, id, description, link }  }) => {
+    console.log(image); 
 
-    const { title, img } = props;
+    // const { title, img } = props;
 
     // const cardStyle = {
     //     boxShadow: "0 0 20px silver",
@@ -14,11 +15,11 @@ const index = (props) => {
         <>
             <div className="card">
                 <div className="card__inside">
-                    <img className='card__inside-img' src={img} alt="picture" />
+                    <img className='card__inside-img' src={image} alt="picture" />
                 </div>
                 <h3 className="card-title">{title}</h3>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat mauris nisl est accumsan quis tempus.</p>
-                <a href="#" className="card-link">Read More</a>
+                <p className="card-text">{description}</p>
+                <a href="#" className="card-link">{link}</a>
             </div>
         </>
 

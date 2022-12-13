@@ -1,7 +1,7 @@
 import "./style.scss";
 import Card from "../../UI/Card";
 import Box from "../../UI/Card/index2";
-import Button from "../../UI/Button/index";
+// import Button from "../../UI/Button/index";
 import Puma from "../../assets/images/image-stoke.png";
 import Next from "../../assets/images/next.svg";
 import Video from "../../assets/images/video-play.png";
@@ -21,6 +21,65 @@ import BlackShoes from "../../assets/images/blackShoes.png";
 
 
 const index = () => {
+
+    const array = [
+        {
+          id: 1,
+          image: Quality,
+          title: "Quality",
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          feugiat mauris nisl est accumsan quis tempus.`,
+          link: "Read More",
+        },
+        {
+          id: 2,
+          image: flexible,
+          title: "Flexible",
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          feugiat mauris nisl est accumsan quis tempus.`,
+          link: "Read More",
+        },
+        {
+          id: 3,
+          image: longLasting,
+          title: "Long Lasting",
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          feugiat mauris nisl est accumsan quis tempus.`,
+          link: "Read More",
+        }
+      ];
+
+      const list = [
+        {
+          id: 1,
+          image:  Shoes1,
+          title: "Puma RS-X Bold",
+          size: "Dubble-XL",
+          price: "$200", 
+        },
+        {
+          id: 2,
+          image:  Shoes2 ,
+          title: "Puma Sneakers",
+          size: "Dubble-XL",
+          price: "$180",
+        },
+        {
+          id: 3,
+          image:  Shoes3 ,
+          title: "Puma Ferrari",
+          size: "Dubble-XL",
+          price: "$190",
+        },
+        {
+          id: 4,
+          image:  Shoes4 ,
+          title: "Puma Running",
+          size: "Dubble-XL",
+          price: "$200",
+        },
+      ];
+
     return (
         <>
 
@@ -104,9 +163,14 @@ const index = () => {
                             <h3 className="feature-firstTitle">Feature</h3>
                             <h2 className="feature-title">We have best feature in Shoes</h2>
                             <div className="feature__lists">
-                                <Card title="Quality" img={Quality} />
+                                {/* <Card title="Quality" img={Quality} />
                                 <Card title="Flexible" img={flexible} />
-                                <Card title="Long Lasting" img={longLasting} />
+                                <Card title="Long Lasting" img={longLasting} /> */}
+                                {
+                                array.length > 0 ? array.map((el) => {
+                                    return <Card user={el} key={el.id} />
+                                }) : <h1>NOT FOUND</h1>
+                                }
                             </div>
                         </div>
                     </div>
@@ -133,10 +197,16 @@ const index = () => {
                             </div>
                             
                             <div className="gallery__boxs">
-                                <Box title="Puma RS-X Bold" img={Shoes1} prices="$200"/>
+                                {/* <Box title="Puma RS-X Bold" img={Shoes1} prices="$200"/>
                                 <Box title="Puma Sneakers" img={Shoes2} prices="$180"/>
                                 <Box title="Puma Ferrari" img={Shoes3} prices="$190"/>
-                                <Box title="Puma Running" img={Shoes4} prices="$200"/>
+                                <Box title="Puma Running" img={Shoes4} prices="$200"/> */}
+
+                                {
+                                list.length > 0 ? list.map((el) => {
+                                    return <Box data={el} key={el.id} />
+                                }) : <h1>NOT FOUND</h1>
+                                }
                             </div>
 
                             <h2 className="gallery__testimonials-titleMove">Testimonials</h2>

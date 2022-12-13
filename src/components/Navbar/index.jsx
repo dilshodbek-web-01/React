@@ -16,6 +16,7 @@ const index = () => {
                             <li className="nav__list--item"><a href="#" className="nav__list--item-link">Gallary</a></li>
                         </ul>
                         <button type="submit" className="nav-btn">Buy Now</button>
+                        <span className="nav-menu"> <i class="bi bi-list"></i> </span>
                     </nav>
                 </div>
             </header>

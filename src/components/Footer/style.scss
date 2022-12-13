@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &--social {
     &-title {
@@ -52,4 +53,68 @@
 
 .footer-hr {
     margin: 25px 0;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  
+    &--social {
+      gap: 20px;
+      &-title {
+        max-width: 265px;
+        font-family: "Poppins";
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 36px;
+        color: #000000;
+        margin: 30px 0 39px;
+      }
+  
+      &-email {
+        margin-bottom: 18px;
+      }
+    }
+  
+    &--services {
+      max-width: 257px;
+      margin: 0 auto;
+      &-title {
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 33px;
+        color: #000000;
+        margin-bottom: 30px;
+      }
+  
+      &-text {
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 30px;
+        color: #000000;
+        margin-bottom: 17px;
+      }
+    }
+  }
+  
+  .footer-title {
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+  }
+  
+  .footer-hr {
+      margin: 25px 0;
+  }
+
 }
