@@ -1,7 +1,16 @@
+import React, { useRef } from 'react';
 import "./style.scss";
 import Logotip from "../../assets/images/logo.svg";
 
 const index = () => {
+
+    const dropDown = useRef();
+
+    const slide = () => {
+        dropDown.current.classList.toggle('swiper');
+    };
+
+
     return (
         <>
 
@@ -16,7 +25,19 @@ const index = () => {
                             <li className="nav__list--item"><a href="#" className="nav__list--item-link">Gallary</a></li>
                         </ul>
                         <button type="submit" className="nav-btn">Buy Now</button>
-                        <span className="nav-menu"> <i class="bi bi-list"></i> </span>
+                        <span className="nav-menu" onClick={()=> { slide() }}> <i class="bi bi-list"></i> </span>
+                        <div ref={dropDown} className="drop__down">
+                            <ul className="drop__down--list">
+                                <li className="drop__down--list--item">
+                                    <a href="#" className="drop__down--list--item-linkDrop"></a>Menu</li>
+                                <li className="drop__down--list--item">
+                                    <a href="#" className="drop__down--list--item-linkDrop"></a>About</li>
+                                <li className="drop__down--list--item">
+                                    <a href="#" className="drop__down--list--item-linkDrop"></a>Feature</li>
+                                <li className="drop__down--list--item">
+                                    <a href="#" className="drop__down--list--item-linkDrop"></a>Gallary</li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </header>
